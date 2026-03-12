@@ -1,0 +1,97 @@
+/* Importation d'une police moderne de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #0d6efd; /* Bleu Bootstrap par défaut */
+    --bg-light: #f8f9fa;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: #333;
+    line-height: 1.6;
+    /* Assure que le footer reste en bas si la page est courte */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Style de la barre de navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    padding: 0.8rem 1rem; (cite: 80, 81)
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Conteneur principal */
+.container.mt-4 {
+    flex: 1; /* Permet de pousser le footer vers le bas */
+    padding-bottom: 3rem; (cite: 83)
+}
+
+/* Cartes pour les Quiz et Questions */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Boutons personnalisés */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+/* Style spécifique au Timer (timer.js) */
+#quiz-timer {
+    font-weight: bold;
+    font-variant-numeric: tabular-nums; /* Évite que le texte saute lors du décompte */
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #fff;
+    border: 2px solid var(--primary-color);
+}
+
+/* Progress Bar (pour l'avancement du quiz) */
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+/* Styles pour les feedbacks (Correct / Incorrect) */
+.feedback-correct {
+    border-left: 5px solid #198754;
+    background-color: #e9f7ef;
+}
+
+.feedback-wrong {
+    border-left: 5px solid #dc3545;
+    background-color: #fdf2f2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container.mt-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
